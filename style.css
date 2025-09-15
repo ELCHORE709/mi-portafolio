@@ -97,7 +97,6 @@ body {
     background: url('Fondo.png') no-repeat center center/cover;
     position: relative;
     text-align: left;
-    /* La imagen de fondo se pone aquí */
 }
 
 /* Esta capa hace el difuminado y la opacidad */
@@ -110,11 +109,11 @@ body {
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
-    z-index: 1; /* Asegura que la capa esté debajo del contenido */
+    z-index: 1;
 }
 
 .hero-content {
-    z-index: 2; /* El contenido se queda arriba de la capa difuminada */
+    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -149,11 +148,12 @@ body {
 .hero-images {
     display: flex;
     gap: 1rem;
+    align-items: center;
 }
 
 .hero-images img {
     width: 100%;
-    max-width: 250px;
+    max-width: 200px; /* Tamaño más pequeño y flexible */
     height: auto;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
