@@ -88,17 +88,19 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* Hero Section (Nuevo Diseño) */
+/* Hero Section */
 .hero {
-    min-height: 70vh; /* Se redujo el espacio */
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://via.placeholder.com/1920x1080.png?text=Fondo+personalizado') no-repeat center center/cover;
+    background: url('Fondo.png') no-repeat center center/cover;
     position: relative;
     text-align: left;
+    /* La imagen de fondo se pone aquí */
 }
 
+/* Esta capa hace el difuminado y la opacidad */
 .hero::after {
     content: '';
     position: absolute;
@@ -107,10 +109,12 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 1; /* Asegura que la capa esté debajo del contenido */
 }
 
 .hero-content {
-    z-index: 2;
+    z-index: 2; /* El contenido se queda arriba de la capa difuminada */
     display: flex;
     justify-content: space-between;
     align-items: center;
