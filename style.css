@@ -88,15 +88,15 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* Hero Section */
+/* Hero Section (Nuevo Diseño) */
 .hero {
+    min-height: 70vh; /* Se redujo el espacio */
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 100vh;
+    justify-content: center;
     background: url('https://via.placeholder.com/1920x1080.png?text=Fondo+personalizado') no-repeat center center/cover;
     position: relative;
+    text-align: left;
 }
 
 .hero::after {
@@ -111,17 +111,65 @@ body {
 
 .hero-content {
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
 }
 
-.hero h1 {
+.hero-left {
+    flex: 1;
+    min-width: 50%;
+}
+
+.hero-left h1 {
     font-size: 4rem;
     margin-bottom: 0.5rem;
 }
 
-.hero h2 {
+.hero-left h2 {
     font-size: 1.5rem;
     color: var(--accent-color);
+}
+
+.hero-right {
+    flex: 1;
+    min-width: 50%;
+}
+
+.hero-right p {
+    font-size: 1.1rem;
     margin-bottom: 2rem;
+}
+
+.hero-images {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-images img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón de "Ver Proyectos" */
+.btn-hero {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--text-color);
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: background 0.3s ease;
+}
+
+.btn-hero:hover {
+    background: #005a9a;
 }
 
 /* General Sections */
@@ -270,10 +318,22 @@ body {
     .menu-toggle {
         display: flex;
     }
-    .hero h1 {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-left h1 {
         font-size: 3rem;
     }
-    .hero h2 {
+    .hero-left h2 {
         font-size: 1.2rem;
+    }
+    .hero-right p {
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+    .hero-images {
+        flex-direction: column;
+        align-items: center;
     }
 }
