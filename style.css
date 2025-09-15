@@ -115,7 +115,7 @@ body {
 .hero-content {
     z-index: 2;
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente fila si no hay espacio */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
@@ -232,9 +232,20 @@ body {
     padding: 1rem;
 }
 
-/* Project Details Section */
-.project-detail-section {
-    padding-top: 4rem;
+/* Project Details Section (SOLUCIÓN) */
+.project-detail-section .project-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-detail-section .project-images img {
+    width: 100%; /* Las imágenes ocuparán todo el ancho en móvil */
+    max-width: 400px; /* Tamaño máximo para desktop */
+    height: auto;
+    border-radius: 5px;
 }
 
 .project-card {
@@ -242,19 +253,6 @@ body {
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 8px;
-}
-
-.project-images {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.project-images img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
 }
 
 .project-card h3 {
