@@ -115,6 +115,7 @@ body {
 .hero-content {
     z-index: 2;
     display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente fila si no hay espacio */
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
@@ -122,7 +123,6 @@ body {
 
 .hero-left {
     flex: 1;
-    min-width: 50%;
 }
 
 .hero-left h1 {
@@ -137,7 +137,6 @@ body {
 
 .hero-right {
     flex: 1;
-    min-width: 50%;
 }
 
 .hero-right p {
@@ -153,7 +152,7 @@ body {
 
 .hero-images img {
     width: 100%;
-    max-width: 200px; /* Tamaño más pequeño y flexible */
+    max-width: 200px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
