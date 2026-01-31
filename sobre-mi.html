@@ -3,103 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Navarro - Sobre Mí</title>
+    <title>Sobre Mí | Mauricio Navarro</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Mauricio Navarro</a>
+            <a href="index.html" class="logo">Mauricio<span>.Dev</span></a>
             <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="proyectos.html">Portafolio</a></li>
+                <li><a href="sobre-mi.html" class="active">Sobre Mí</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
+    <header class="section" style="padding-top: 150px; padding-bottom: 50px;">
+        <div class="container fade-in">
+            <span class="subtitle">Mi Perfil</span>
+            <h1>Ingeniero & Creador</h1>
+            <p class="text-lead" style="max-width: 800px;">
+                De resolver problemas de hardware en laboratorios de TI a diseñar arquitecturas escalables en videojuegos. Mi enfoque combina la lógica de la ingeniería con la creatividad del diseño de niveles.
+            </p>
+        </div>
+    </header>
+
     <main class="container">
-        <section class="section">
-            <h2>Perfil Profesional</h2>
+        
+        <section class="section fade-in" style="padding-top: 0;">
             <div class="about-content">
-                <p>Mi transición profesional desde el soporte técnico IT hacia el desarrollo de videojuegos refleja una evolución natural de mi pasión por resolver problemas técnicos complejos. Tras años proporcionando soluciones de infraestructura tecnológica, decidí canalizar mis habilidades analíticas hacia la creación de experiencias interactivas.</p>
-                <br>
-                <p>Actualmente, trabajo como <strong>Level Designer en C111 Estudios</strong>, donde diseño experiencias multijugador para Fortnite utilizando UEFN bajo acuerdos de confidencialidad, combinando limitaciones técnicas con necesidades creativas.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Habilidades Técnicas (Hard Skills)</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>💻 Lenguajes & Arquitectura</h3>
-                    <ul>
-                        <li><strong>C# (Avanzado):</strong> Unity, Arquitectura SOLID, Patrones de Diseño (Singleton, Observer, State Machine).</li>
-                        <li><strong>Verse:</strong> Scripting para UEFN/Fortnite Creative.</li>
-                        <li><strong>Blueprints:</strong> Lógica de Gameplay en Unreal Engine 5.</li>
-                    </ul>
-                </div>
-                
-                <div class="skill-card">
-                    <h3>⚙️ Motores de Juego</h3>
-                    <ul>
-                        <li><strong>Unity 6:</strong> Generación procedural, IA (FSM), Pathfinding (A*).</li>
-                        <li><strong>Unreal Engine 5:</strong> Level Design, Optimización de Assets.</li>
-                        <li><strong>UEFN:</strong> Creación de experiencias multijugador.</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <h3>🛠️ Herramientas</h3>
-                    <ul>
-                        <li><strong>Git/GitHub:</strong> Control de versiones y flujo de trabajo.</li>
-                        <li><strong>Profiling:</strong> Análisis de memoria y optimización.</li>
-                        <li><strong>Soporte IT:</strong> Diagnóstico de Hardware y Redes.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Formación y Certificaciones</h2>
-            <div class="cert-container">
-                <div class="cert-card featured-cert">
-                    <div class="cert-info">
-                        <h3>Unity 2D Dungeon Gunner Roguelike Development</h3>
-                        <p class="cert-source">Udemy | Instructor: Rob Ager</p>
-                        <p>Curso intensivo de <strong>51 horas</strong> especializado en arquitectura de código escalable.</p>
-                        <ul>
-                            <li>Generación procedural de mazmorras.</li>
-                            <li>Sistemas de combate y Máquinas de Estados para IA.</li>
-                        </ul>
+                <div style="display: flex; align-items: flex-start; gap: 20px;">
+                    <span style="font-size: 3rem;">🚀</span>
+                    <div>
+                        <h3>Mi Trayectoria</h3>
+                        <p style="margin-bottom: 20px; color: var(--text-muted);">
+                            Comencé mi carrera en el soporte técnico, donde aprendí la importancia de la estabilidad y la optimización de sistemas. Esa base técnica fue crucial cuando decidí dar el salto al desarrollo de videojuegos.
+                        </p>
+                        <p style="color: var(--text-muted);">
+                            Actualmente, trabajo como <strong>Level Designer en C111 Estudios</strong>, colaborando en proyectos para el ecosistema de Fortnite (UEFN). Mi día a día implica escribir lógica en <strong>Verse</strong>, diseñar niveles competitivos y asegurar que el rendimiento sea impecable.
+                        </p>
                     </div>
                 </div>
-
-                <div class="cert-card">
-                    <h3>Ingeniería en Videojuegos</h3>
-                    <p class="cert-source">Universidad [Tu Universidad]</p>
-                    <p>Grado en curso (Finalización: 2026)</p>
-                </div>
-
-                <div class="cert-card">
-                    <h3>Unreal Engine: Fundamentos y Materiales</h3>
-                    <p class="cert-source">Plataforma de Aprendizaje</p>
-                    <p>Especialización en Shaders y Blueprint Scripting.</p>
-                </div>
             </div>
         </section>
+
+        <section class="section fade-in">
+            <h2>Arsenal Técnico</h2>
+            <div class="skills-grid" style="margin-top: 40px;">
+                
+                <div class="skill-box">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">💻</div>
+                    <h4>Lenguajes & Código</h4>
+                    <ul>
+                        <li><strong style="color: white;">C# (Unity):</strong> Arquitectura SOLID, Patrones (Singleton, Observer).</li>
+                        <li><strong style="color: white;">Verse (UEFN):</strong> Lógica de juego y dispositivos.</li>
+                        <li><strong style="color: white;">Blueprints:</strong> Scripting visual avanzado.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-box">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">⚙️</div>
+                    <h4>Motores de Juego</h4>
+                    <ul>
+                        <li><strong style="color: white;">Unity 6:</strong> Generación Procedural, IA, UI Toolkit.</li>
+                        <li><strong style="color: white;">Unreal Engine 5:</strong> Level Design, Materiales, Lumen.</li>
+                        <li><strong style="color: white;">Git/GitHub:</strong> Control de versiones en equipos.</li>
+                    </ul>
+                </div>
+
+                <div class="skill-box">
+                    <div style="font-size: 2.5rem; margin-bottom: 15px;">🔧</div>
+                    <h4>Soporte & IT</h4>
+                    <ul>
+                        <li>Diagnóstico y reparación de Hardware.</li>
+                        <li>Gestión de redes LAN y cableado estructurado.</li>
+                        <li>Optimización de rendimiento (Profiling).</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Educación Continua</h2>
+            <p style="color: var(--text-muted); margin-bottom: 30px;">Formación especializada y certificaciones técnicas.</p>
+            
+            <div class="cert-container">
+                
+                <details class="cert-card featured-cert">
+                    <summary class="cert-summary">
+                        <div class="cert-thumb-wrapper" style="background: #a435f0;">
+                            <span style="color: white; font-weight: bold; font-size: 1.2rem;">Ud</span>
+                        </div>
+                        <div class="cert-header-text">
+                            <h3>Unity 2D Dungeon Gunner Roguelike</h3>
+                            <span class="cert-meta">Udemy | Rob Ager | 51 Horas Intensivas</span>
+                        </div>
+                        <div class="toggle-icon">+</div>
+                    </summary>
+                    <div class="cert-details-content">
+                        <p style="margin-bottom: 15px;">Curso avanzado de arquitectura de software para videojuegos. Se construyó un juego completo desde cero sin código "spaghetti".</p>
+                        <ul style="color: var(--text-muted); margin-left: 20px; list-style: disc;">
+                            <li>Generación procedural de mapas.</li>
+                            <li>IA con Máquinas de Estados.</li>
+                            <li>Sistema de eventos para desacoplar lógica.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="cert-card">
+                    <summary class="cert-summary">
+                        <div class="cert-thumb-wrapper" style="background: #007acc;">
+                            <span style="color: white; font-weight: bold; font-size: 1.2rem;">Uni</span>
+                        </div>
+                        <div class="cert-header-text">
+                            <h3>Ingeniería en Videojuegos</h3>
+                            <span class="cert-meta">Universidad | 2026 (En Curso)</span>
+                        </div>
+                        <div class="toggle-icon">+</div>
+                    </summary>
+                    <div class="cert-details-content">
+                        <p>Formación académica rigurosa en matemáticas (Álgebra Lineal, Física), programación orientada a objetos y diseño de juegos.</p>
+                    </div>
+                </details>
+
+                 <details class="cert-card">
+                    <summary class="cert-summary">
+                        <div class="cert-thumb-wrapper" style="background: #333;">
+                            <span style="color: white; font-weight: bold; font-size: 1.2rem;">UE</span>
+                        </div>
+                        <div class="cert-header-text">
+                            <h3>Unreal Engine: Fundamentos</h3>
+                            <span class="cert-meta">Certificación Técnica</span>
+                        </div>
+                        <div class="toggle-icon">+</div>
+                    </summary>
+                    <div class="cert-details-content">
+                        <p>Dominio de herramientas del editor, creación de Shaders básicos y flujo de trabajo con Blueprints.</p>
+                    </div>
+                </details>
+
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Mauricio Navarro. Todos los derechos reservados.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mauricio Navarro. Designed for Performance.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
