@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Navarro - Ingeniero en Videojuegos</title>
+    <title>Mauricio Navarro | Ingeniero de Videojuegos</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Mauricio Navarro</a>
+            <a href="index.html" class="logo">Mauricio<span>.Dev</span></a>
             <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
             <ul class="nav-links" id="nav-menu">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="proyectos.html">Portafolio</a></li>
                 <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
@@ -28,53 +26,84 @@
 
     <header class="hero">
         <div class="container hero-content">
-            <div class="hero-left">
-                <h1>Mauricio Navarro G.</h1>
-                <h2>Ingeniero de Videojuegos | Unity & Unreal</h2>
-                <p style="margin-top: 1rem; font-size: 1.1rem; color: #ddd;">
-                    Especializado en programación de gameplay (C#), diseño de niveles y arquitectura de sistemas. 
-                    Actualmente desarrollando experiencias para Fortnite (UEFN).
+            <div class="hero-text fade-in">
+                <span class="subtitle">Game Engineer & Level Designer</span>
+                <h1>Creo Mundos Virtuales y Experiencias Interactivas</h1>
+                <p class="text-lead">
+                    Ingeniero especializado en <strong>Unity y Unreal Engine 5</strong>. 
+                    Actualmente desarrollando experiencias multijugador competitivas para el ecosistema de Fortnite.
                 </p>
-                <a href="proyectos.html" class="btn-hero">Ver Portafolio</a>
-            </div>
-            <div class="hero-right">
-                <div class="hero-images">
-                    <img src="Unity.png" alt="Logo Unity">
-                    <img src="Unreal.png" alt="Logo Unreal">
+                <div class="hero-tags">
+                    <div class="tech-tag">🚀 C# / Verse</div>
+                    <div class="tech-tag">🎮 Gameplay Programming</div>
+                    <div class="tech-tag">🌐 Multiplayer Logic</div>
                 </div>
+                <br><br>
+                <div class="btn-group">
+                    <a href="proyectos.html" class="btn btn-primary">Ver Mis Proyectos</a>
+                    <a href="contacto.html" class="btn btn-outline">Hablemos</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <img src="https://via.placeholder.com/600x400/1c1c1f/3b82f6?text=Gameplay+Engineering" alt="Visual" style="border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
             </div>
         </div>
     </header>
 
-    <main class="container">
-        <section id="proyectos-destacados" class="section">
-            <h2>Proyectos Destacados</h2>
-            
-            <div class="projects-grid">
-                <a href="proyectos.html#proyecto-confidencial" class="project-card-grid">
-                    <img src="https://via.placeholder.com/400x250.png?text=Confidencial+UEFN" alt="Proyecto Confidencial">
-                    <h3>C111 Estudios (Confidencial)</h3>
-                </a>
-
-                <a href="proyectos.html#beers-and-crystals" class="project-card-grid">
-                    <img src="Captura_Beers.png" alt="Beers & Crystals">
-                    <h3>Beers & Crystals (Roguelike)</h3>
-                </a>
+    <section class="section">
+        <div class="container">
+            <h2 class="fade-in">Proyectos Destacados</h2>
+            <div class="grid-projects fade-in">
                 
-                <a href="proyectos.html#el-ultimo-viaje" class="project-card-grid">
-                    <img src="Captura_Ultimo_Viaje.png" alt="El ultimo viaje">
-                    <h3>El Último Viaje</h3>
+                <a href="proyectos.html#proyecto-confidencial" class="card">
+                    <div class="card-image">
+                        <img src="https://via.placeholder.com/600x400/000000/ffffff?text=C111+Estudios" alt="C111 Estudios">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tech">
+                            <span>UEFN</span><span>Verse</span><span>Profesional</span>
+                        </div>
+                        <h3>C111 Estudios (Fortnite)</h3>
+                        <p>Desarrollo de niveles y mecánicas multijugador bajo NDA. Optimización competitiva.</p>
+                    </div>
                 </a>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2rem;">
-                <a href="proyectos.html" class="download-btn">Ver Todos los Proyectos</a>
-            </div>
-        </section>
-    </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Mauricio Navarro. Todos los derechos reservados.</p>
+                <a href="proyectos.html#beers-and-crystals" class="card">
+                    <div class="card-image">
+                        <img src="Captura_Beers_2.png" alt="Beers & Crystals">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tech">
+                            <span>Unity 6</span><span>C#</span><span>Roguelike</span>
+                        </div>
+                        <h3>Beers & Crystals</h3>
+                        <p>Dungeon Crawler con generación procedural e IA avanzada. Arquitectura escalable.</p>
+                    </div>
+                </a>
+
+                <a href="proyectos.html#el-ultimo-viaje" class="card">
+                    <div class="card-image">
+                        <img src="Captura_Ultimo_Viaje_2.png" alt="El Ultimo Viaje">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tech">
+                            <span>Unity</span><span>Shaders</span><span>Atmósfera</span>
+                        </div>
+                        <h3>El Último Viaje</h3>
+                        <p>Juego de exploración basado en sonido y narrativa visual en el Mictlán.</p>
+                    </div>
+                </a>
+
+            </div>
+            <br><br>
+            <center><a href="proyectos.html" class="btn btn-outline fade-in">Ver Portafolio Completo →</a></center>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mauricio Navarro. Designed for Performance.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
