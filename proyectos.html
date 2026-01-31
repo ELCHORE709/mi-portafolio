@@ -3,145 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Navarro - Proyectos</title>
+    <title>Proyectos | Mauricio Navarro</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Mauricio Navarro</a>
+            <a href="index.html" class="logo">Mauricio<span>.Dev</span></a>
             <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html" class="active">Portafolio</a></li>
                 <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
+    <header class="section" style="padding-top: 150px; padding-bottom: 50px;">
+        <div class="container fade-in">
+            <span class="subtitle">Mi Trabajo</span>
+            <h1>Portafolio de Desarrollo</h1>
+            <p class="text-lead">Una colección de proyectos académicos, personales y profesionales que demuestran mis capacidades técnicas en Unity y Unreal.</p>
+        </div>
+    </header>
+
     <main class="container">
-        <section id="proyectos" class="section">
-            <h2>Mis Proyectos</h2>
-            
-            <section id="proyecto-confidencial" class="project-detail-section">
-                <div class="project-card">
-                    <h3>Proyecto Confidencial (UEFN)</h3>
-                    <div class="project-images">
-                        <img src="https://via.placeholder.com/800x450.png?text=Proyecto+Confidencial+UEFN" alt="Proyecto Confidencial">
+        
+        <section id="proyecto-confidencial" class="section fade-in">
+            <div class="hero-content">
+                <div>
+                    <span class="subtitle">Experiencia Profesional</span>
+                    <h2>C111 Estudios (Fortnite / UEFN)</h2>
+                    <p class="text-lead">Level Design & Multiplayer Logic</p>
+                    <br>
+                    <p>Colaboración activa en la creación de experiencias para el ecosistema de Fortnite. Uso de <strong>Verse</strong> para lógica de juego personalizada y diseño de niveles competitivos.</p>
+                    <br>
+                    <div class="card-tech">
+                        <span>Unreal Editor for Fortnite</span>
+                        <span>Trabajo en Equipo</span>
+                        <span>Optimización</span>
                     </div>
-                    <p>Colaboración activa con <strong>C111 Estudios</strong>. Desarrollo de experiencias multijugador utilizando Unreal Editor for Fortnite (UEFN). Proyecto actualmente bajo acuerdo de confidencialidad (NDA).</p>
-                    <p><strong>Mi Rol:</strong> Level Designer & Environment Artist</p>
-                    <ul>
-                        <li>Diseño y estructuración de niveles multijugador competitivos.</li>
-                        <li>Implementación de mecánicas de juego utilizando Verse y dispositivos de UEFN.</li>
-                        <li>Optimización de assets y colaboración remota con el equipo de desarrollo.</li>
-                    </ul>
-                    <a href="#" class="download-btn" style="background-color: #555; cursor: default;">Proyecto bajo NDA</a>
+                    <br>
+                    <button class="btn btn-outline" style="cursor: not-allowed; opacity: 0.7;">Proyecto bajo NDA 🔒</button>
                 </div>
-            </section>
-
-            <section id="beers-and-crystals" class="project-detail-section">
-                <div class="project-card">
-                    <h3>Beers & Crystals</h3>
-                    <div class="project-images">
-                        <img src="Captura_Beers_2.png" alt="Gameplay Beers & Crystals">
-                        <img src="Captura_Beers_3.png" alt="Gameplay Beers & Crystals">
-                    </div>
-                    <p>Roguelike de acción desarrollado en <strong>Unity 6 (C#)</strong>. El proyecto se centra en una arquitectura escalable, donde el jugador explora mazmorras generadas proceduralmente. Se implementaron patrones de diseño avanzados para la gestión de estados del juego.</p>
-                    <p><strong>Mi Rol:</strong> Programador Principal (Basado en Curso Avanzado)</p>
-                    <ul>
-                        <li><strong>IA & Pathfinding:</strong> Desarrollo de Máquinas de Estados Finitos (FSM) para el comportamiento enemigo y navegación A*.</li>
-                        <li><strong>Generación Procedural:</strong> Algoritmos para la creación aleatoria de niveles y distribución de loot.</li>
-                        <li>Implementación completa de mecánicas de combate, inventario y UI.</li>
-                    </ul>
-                    <a href="https://drive.google.com/drive/folders/1CFlTs2WAhchwTgOFUtKUYVQUJvlMkfRv?usp=sharing" class="download-btn" target="_blank">Jugar (Ver Demo)</a>
+                <div>
+                    <img src="https://via.placeholder.com/600x400/111/333?text=NDA+Protected" style="border-radius: 16px; border: 1px solid var(--border);">
                 </div>
-            </section>
-            
-            <section id="el-ultimo-viaje" class="project-detail-section">
-                <div class="project-card">
-                    <h3>El Último Viaje</h3>
-                    <div class="project-images">
-                        <img src="Captura_Ultimo_Viaje_2.png" alt="El ultimo viaje">
-                        <img src="Captura_Ultimo_Viaje_3.png" alt="El ultimo viaje">
-                    </div>
-                    <p>Juego de exploración atmosférica ambientado en el inframundo del Mictlán. El jugador, privado de la vista, debe utilizar otros sentidos para navegar un mundo semi-abierto, recolectando almas y guiándose por recuerdos.</p>
-                    <p><strong>Mi Rol:</strong> Programador de Gameplay</p>
-                    <ul>
-                        <li>Programación del sistema de eventos, gestión de talismanes e interacción con NPCs (Guías Espirituales).</li>
-                        <li>Desarrollo de lógica de condiciones de victoria y múltiples finales.</li>
-                        <li>Creación y ajuste de <strong>Shaders</strong> para la ambientación visual del mapa y personajes.</li>
-                    </ul>
-                    <a href="https://drive.google.com/drive/folders/18ZMqqbXhT3EK5HQR4zVAIU4N4qO7MwSV?usp=sharing" class="download-btn" target="_blank">Descargar Build</a>
-                </div>
-            </section>
-            
-            <section id="simulador-sistema-solar" class="project-detail-section">
-                <div class="project-card">
-                    <h3>Simulador Orbital</h3>
-                    <div class="project-images">
-                        <img src="Captura_Sistema_Solar_2.png" alt="Sistema Solar">
-                        <img src="Captura_Sistema_Solar_3.png" alt="Sistema Solar">
-                    </div>
-                    <p>Simulación interactiva del sistema solar desarrollada en Unity, permitiendo al usuario alternar entre 3 modos de cámara y controlar la velocidad temporal de la simulación.</p>
-                    <p><strong>Mi Rol:</strong> Programador</p>
-                    <ul>
-                        <li>Implementación de física orbital mediante scripts en C# para trayectorias estables.</li>
-                        <li>Cálculo matemático de elipses y velocidades de traslación.</li>
-                        <li>Colaboración en integración de assets (Modelado 3D: Christian Alonso).</li>
-                    </ul>
-                    <a href="https://drive.google.com/drive/folders/1PN0QzAaJE3zpgDrL_rB6ycB2gL5WyuAT?usp=sharing" class="download-btn" target="_blank">Descargar Proyecto</a>
-                </div>
-            </section>
-            
-            <section id="chess-rts-3d" class="project-detail-section">
-                <div class="project-card">
-                    <h3>Chess RTS 3D</h3>
-                    <div class="project-images">
-                        <img src="Captura_Chess_2.png" alt="Chess RTS">
-                        <img src="Captura_Chess_3.png" alt="Chess RTS">
-                    </div>
-                    <p>Prototipo de Estrategia en Tiempo Real (RTS) con temática de ajedrez.</p>
-                    <p><strong>Mi Rol:</strong> Programador Full Stack</p>
-                    <ul>
-                        <li>Desarrollo integral de mecánicas, interfaz de usuario (UI) y sistemas de pausa.</li>
-                        <li>Implementación de una <strong>IA básica</strong> para el oponente (NPC).</li>
-                        <li>Integración de assets de terceros y gestión de escenas.</li>
-                    </ul>
-                    <a href="https://drive.google.com/drive/folders/1TeHY3d_UryVly2k7iQ4En_3FK53W1kki?usp=sharing" class="download-btn" target="_blank">Descargar Proyecto</a>
-                </div>
-            </section>
-
-            <section id="car-champions" class="project-detail-section">
-                <div class="project-card">
-                    <h3>Car-Champions</h3>
-                    <div class="project-images">
-                        <img src="Captura_Car_Champions_2.png" alt="Car Champions">
-                        <img src="Captura_Car_Champions_3.png" alt="Car Champions">
-                    </div>
-                    <p>Recreación de mecánicas de física vehicular basadas en estilo "Rocket League".</p>
-                    <p><strong>Mi Rol:</strong> Programador de Físicas</p>
-                    <ul>
-                        <li>Configuración y scripting de vehículos utilizando <strong>Wheel Colliders</strong> de Unity.</li>
-                        <li>Ajuste de físicas de suspensión, fricción y respuesta de control.</li>
-                        <li>Diseño de menús y flujo de juego.</li>
-                    </ul>
-                    <a href="https://drive.google.com/drive/folders/1-lsW_FsNLXB1HaR-oj4g8A-Dnr-45vYv?usp=sharing" class="download-btn" target="_blank">Descargar Proyecto</a>
-                </div>
-            </section>
-
+            </div>
         </section>
+
+        <section id="beers-and-crystals" class="section fade-in">
+            <div class="hero-content">
+                <div>
+                    <span class="subtitle">Unity 6 / C#</span>
+                    <h2>Beers & Crystals (Roguelike)</h2>
+                    <p>Desarrollo de un Dungeon Crawler complejo. Este proyecto fue mi prueba de fuego para entender la <strong>Arquitectura Escalable</strong> en videojuegos.</p>
+                    <ul style="margin: 20px 0; color: var(--text-muted);">
+                        <li>• Generación Procedural de Niveles.</li>
+                        <li>• IA Enemiga con Máquinas de Estados (FSM).</li>
+                        <li>• Sistema de Inventario y Loot.</li>
+                    </ul>
+                    <a href="https://drive.google.com/drive/folders/1CFlTs2WAhchwTgOFUtKUYVQUJvlMkfRv?usp=sharing" target="_blank" class="btn btn-primary">Jugar Demo</a>
+                </div>
+                <div>
+                     <img src="Captura_Beers_2.png" style="border-radius: 16px; border: 1px solid var(--border); margin-bottom: 10px;">
+                     <img src="Captura_Beers_3.png" style="border-radius: 16px; border: 1px solid var(--border);">
+                </div>
+            </div>
+        </section>
+
+        <section class="section fade-in">
+            <h2>Otros Proyectos</h2>
+            <div class="grid-projects">
+                <div class="card">
+                    <div class="card-image"><img src="Captura_Ultimo_Viaje_2.png"></div>
+                    <div class="card-body">
+                        <h3>El Último Viaje</h3>
+                        <p>Exploración y Shaders en Unity.</p>
+                        <a href="https://drive.google.com/drive/folders/18ZMqqbXhT3EK5HQR4zVAIU4N4qO7MwSV?usp=sharing" class="btn btn-outline" style="width:100%">Descargar</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image"><img src="Captura_Sistema_Solar_2.png"></div>
+                    <div class="card-body">
+                        <h3>Simulador Orbital</h3>
+                        <p>Física y matemáticas vectoriales.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%">Descargar</a>
+                    </div>
+                </div>
+
+                 <div class="card">
+                    <div class="card-image"><img src="Captura_Chess_2.png"></div>
+                    <div class="card-body">
+                        <h3>Chess RTS</h3>
+                        <p>Estrategia y lógica de IA básica.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%">Descargar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Mauricio Navarro. Todos los derechos reservados.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mauricio Navarro.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
