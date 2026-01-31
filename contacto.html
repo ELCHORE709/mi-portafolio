@@ -3,44 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mauricio Navarro - Contacto</title>
+    <title>Contacto | Mauricio Navarro</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Mauricio Navarro</a>
+            <a href="index.html" class="logo">Mauricio<span>.Dev</span></a>
             <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
             </div>
             <ul class="nav-links" id="nav-menu">
                 <li><a href="index.html">Inicio</a></li>
+                <li><a href="proyectos.html">Portafolio</a></li>
                 <li><a href="sobre-mi.html">Sobre Mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <main class="container">
-        <section class="section">
-            <h2>Contacto</h2>
-            <p>Puedes contactarme a través de mis perfiles sociales. ¡Estoy siempre disponible para discutir nuevos proyectos!</p>
-            <p></p>
-            <div class="social-links" style="text-align: center;">
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="https://github.com/ELCHORE709?tab=repositories" target="_blank">GitHub</a>
-                <a href="Mauricionavarrogon@gmail.com">Email</a>
+    <main class="container" style="min-height: 80vh; display: flex; align-items: center; justify-content: center;">
+        <div class="contact-card fade-in">
+            <span class="subtitle">¿Trabajamos Juntos?</span>
+            <h1>Empecemos una Conversación</h1>
+            <p class="text-lead" style="margin-bottom: 30px;">
+                Estoy disponible para oportunidades como <strong>Junior Game Developer</strong>, Level Designer o Freelance.
+            </p>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <a href="mailto:Mauricionavarrogon@gmail.com" class="btn btn-primary">
+                    📧 Enviar Correo
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline">
+                    Conectar en LinkedIn
+                </a>
+                <a href="https://github.com/ELCHORE709" target="_blank" class="btn btn-outline">
+                    Ver GitHub
+                </a>
             </div>
-        </section>
+        </div>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Mauricio Navarro. Todos los derechos reservados.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mauricio Navarro.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
