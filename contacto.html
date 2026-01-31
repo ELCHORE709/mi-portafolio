@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Mauricio Navarro</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -24,34 +25,31 @@
         </div>
     </nav>
 
-    <main class="container" style="min-height: 80vh; display: flex; align-items: center; justify-content: center;">
-        <div class="contact-card fade-in">
-            <span class="subtitle">¿Trabajamos Juntos?</span>
-            <h1>Empecemos una Conversación</h1>
-            <p class="text-lead" style="margin-bottom: 30px;">
-                Estoy disponible para oportunidades como <strong>Junior Game Developer</strong>, Level Designer o Freelance.
-            </p>
-            
-            <div style="display: flex; flex-direction: column; gap: 15px;">
-                <a href="mailto:Mauricionavarrogon@gmail.com" class="btn btn-primary">
-                    📧 Enviar Correo
-                </a>
-                <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline">
-                    Conectar en LinkedIn
-                </a>
-                <a href="https://github.com/ELCHORE709" target="_blank" class="btn btn-outline">
-                    Ver GitHub
-                </a>
+    <main class="container" style="min-height: 85vh; display: flex; align-items: center; justify-content: center;">
+        <div class="card fade-in" style="max-width: 500px; width: 100%; padding: 20px;">
+            <div class="card-body">
+                <span class="subtitle" style="text-align:center;">¿Trabajamos Juntos?</span>
+                <h1 style="text-align:center; font-size: 2.5rem;">Hablemos</h1>
+                <p style="text-align:center; margin-bottom: 30px;">Disponible para puestos Junior y Freelance.</p>
+                
+                <form action="https://formspree.io/f/meekdkdl" method="POST">
+                    <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
+                    <textarea name="message" rows="5" placeholder="Cuéntame sobre tu proyecto..." required></textarea>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                </form>
+
+                <div style="margin-top: 30px; text-align: center; border-top: var(--border); padding-top: 20px;">
+                    <p>O encuéntrame en:</p>
+                    <div style="display: flex; justify-content: center; gap: 15px;">
+                        <a href="https://github.com/ELCHORE709" target="_blank" class="btn btn-outline">GitHub</a>
+                        <a href="https://www.linkedin.com/" target="_blank" class="btn btn-outline">LinkedIn</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Mauricio Navarro.</p>
-        </div>
-    </footer>
-
+    <footer><div class="container"><p>&copy; 2025 Mauricio Navarro.</p></div></footer>
     <script src="script.js"></script>
 </body>
 </html>
