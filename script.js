@@ -1,14 +1,40 @@
-// Toggle para el menú móvil
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    document.getElementById('nav-menu').classList.toggle('active');
-});
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. MENU LATERAL MÓVIL
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.getElementById('nav-menu');
 
-// Cierra el menú cuando se hace clic en un enlace (en móvil)
-document.querySelectorAll('.nav-links a').forEach(item => {
-    item.addEventListener('click', () => {
-        const navMenu = document.getElementById('nav-menu');
-        if (navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-        }
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('is-active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('is-active');
+            });
+        });
+    }
+
+    // 2. ANIMACIÓN DE ENTRADA (SCROLL REVEAL)
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Solo animar una vez
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
     });
 });
