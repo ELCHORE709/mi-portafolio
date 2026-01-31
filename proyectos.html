@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyectos | Mauricio Navarro</title>
+    <title>Portafolio | Mauricio Navarro</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -27,8 +28,8 @@
     <header class="section" style="padding-top: 150px; padding-bottom: 50px;">
         <div class="container fade-in">
             <span class="subtitle">Mi Trabajo</span>
-            <h1>Portafolio de Desarrollo</h1>
-            <p class="text-lead">Colección completa de proyectos profesionales, independientes y académicos.</p>
+            <h1>Catálogo de Proyectos</h1>
+            <p class="text-lead">Colección de desarrollos profesionales, indies y prototipos académicos.</p>
         </div>
     </header>
 
@@ -37,22 +38,18 @@
         <section id="proyecto-confidencial" class="section fade-in">
             <div class="hero-content">
                 <div>
-                    <span class="subtitle">Experiencia Profesional (En Curso)</span>
+                    <span class="subtitle">Experiencia Profesional</span>
                     <h2>C111 Estudios (Fortnite / UEFN)</h2>
-                    <p class="text-lead">Level Design & Multiplayer Logic</p>
-                    <br>
-                    <p>Colaboración activa en la creación de experiencias competitivas para el ecosistema de Fortnite. Trabajo bajo NDA enfocado en la retención de jugadores y mecánicas multijugador.</p>
-                    <ul class="tech-list" style="margin-top: 20px; color: var(--text-muted);">
-                        <li>• Scripting de lógica de juego personalizada con <strong>Verse</strong>.</li>
-                        <li>• Diseño de niveles optimizado para rendimiento competitivo.</li>
-                        <li>• Gestión de assets y control de versiones en equipo remoto.</li>
-                    </ul>
-                    <br>
-                    <button class="btn btn-outline" style="cursor: not-allowed; opacity: 0.7;">Proyecto bajo NDA 🔒</button>
+                    <p>Colaboración activa creando experiencias para el ecosistema de Fortnite. Uso de <strong>Verse</strong> para lógica personalizada y diseño de niveles competitivos.</p>
+                    <div class="hero-tags">
+                        <span class="tech-tag">Unreal Editor for Fortnite</span>
+                        <span class="tech-tag">Trabajo Remoto</span>
+                        <span class="tech-tag">Optimización</span>
+                    </div>
+                    <br><br>
+                    <button class="btn btn-outline" style="cursor: not-allowed; opacity: 0.6;">Proyecto bajo NDA 🔒</button>
                 </div>
-                <div>
-                    <img src="https://via.placeholder.com/600x400/111/333?text=NDA+Protected" style="border-radius: 16px; border: 1px solid var(--border);">
-                </div>
+                <div><img src="https://via.placeholder.com/600x400/111/333?text=NDA+Protected" style="border-radius: 12px; border: var(--border);"></div>
             </div>
         </section>
 
@@ -61,103 +58,67 @@
                 <div>
                     <span class="subtitle">Unity 6 / C#</span>
                     <h2>Beers & Crystals (Roguelike)</h2>
-                    <p>Dungeon Crawler desarrollado siguiendo una arquitectura de código profesional y escalable.</p>
-                    <ul class="tech-list" style="margin: 20px 0; color: var(--text-muted);">
-                        <li>• <strong>Generación Procedural:</strong> Algoritmos para crear mazmorras únicas en cada partida.</li>
-                        <li>• <strong>IA Avanzada:</strong> Enemigos con Máquinas de Estados Finitos (FSM) y Pathfinding A*.</li>
-                        <li>• <strong>Sistemas:</strong> Gestión de inventario, combate y UI desacoplada.</li>
+                    <p>Dungeon Crawler desarrollado con arquitectura escalable.</p>
+                    <ul style="margin: 20px 0; color: var(--text-muted); list-style: disc; margin-left: 20px;">
+                        <li>Generación Procedural de Niveles.</li>
+                        <li>IA Enemiga con Máquinas de Estados (FSM).</li>
+                        <li>Sistema de Inventario y Loot desacoplado.</li>
                     </ul>
-                    <div class="btn-group">
-                        <a href="https://drive.google.com/drive/folders/1CFlTs2WAhchwTgOFUtKUYVQUJvlMkfRv?usp=sharing" target="_blank" class="btn btn-primary">Jugar Demo</a>
-                    </div>
+                    <a href="https://drive.google.com/drive/folders/1CFlTs2WAhchwTgOFUtKUYVQUJvlMkfRv?usp=sharing" target="_blank" class="btn btn-primary">🎮 Jugar Demo</a>
                 </div>
-                <div>
-                     <img src="Captura_Beers_2.png" style="border-radius: 16px; border: 1px solid var(--border); margin-bottom: 10px;">
-                </div>
+                <div><img src="Captura_Beers_2.png" style="border-radius: 12px; border: var(--border);"></div>
             </div>
         </section>
 
         <section class="section fade-in">
-            <h2>Proyectos Académicos y Prototipos</h2>
-            <p style="color: var(--text-muted); margin-bottom: 40px;">Desarrollos realizados durante mi formación universitaria enfocados en mecánicas específicas.</p>
-            
+            <h2>Prototipos Académicos</h2>
             <div class="grid-projects">
                 
                 <div class="card">
-                    <div class="card-image"><img src="Captura_Ultimo_Viaje_2.png" alt="El Ultimo Viaje"></div>
+                    <div class="card-image"><img src="Captura_Ultimo_Viaje_2.png"></div>
                     <div class="card-body">
                         <h3>El Último Viaje</h3>
-                        <div class="card-tech"><span>Unity</span><span>Shaders</span><span>Narrativa</span></div>
+                        <div class="card-tech"><span>Unity</span><span>Shaders</span></div>
                         <p>Juego de exploración atmosférica en el Mictlán.</p>
-                        <ul>
-                            <li style="font-size: 0.9rem; color: #aaa; margin-bottom: 5px;">• Programación de sistema de eventos y talismanes.</li>
-                            <li style="font-size: 0.9rem; color: #aaa; margin-bottom: 5px;">• Creación de <strong>Shaders</strong> para efectos visuales.</li>
-                            <li style="font-size: 0.9rem; color: #aaa;">• Lógica de múltiples finales y condiciones de victoria.</li>
-                        </ul>
-                        <br>
-                        <a href="https://drive.google.com/drive/folders/18ZMqqbXhT3EK5HQR4zVAIU4N4qO7MwSV?usp=sharing" target="_blank" class="btn btn-outline" style="width:100%; font-size: 0.9rem;">Descargar Build</a>
+                        <a href="https://drive.google.com/drive/folders/18ZMqqbXhT3EK5HQR4zVAIU4N4qO7MwSV?usp=sharing" class="btn btn-outline" style="width:100%; margin-top: auto;">Descargar</a>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="card-image"><img src="Captura_Car_Champions_2.png" alt="Car Champions"></div>
+                    <div class="card-image"><img src="Captura_Car_Champions_2.png"></div>
                     <div class="card-body">
                         <h3>Car-Champions</h3>
                         <div class="card-tech"><span>Físicas</span><span>Wheel Colliders</span></div>
-                        <p>Recreación de mecánicas de vehículos estilo "Rocket League".</p>
-                        <ul>
-                            <li style="font-size: 0.9rem; color: #aaa; margin-bottom: 5px;">• Configuración de <strong>Wheel Colliders</strong> de Unity.</li>
-                            <li style="font-size: 0.9rem; color: #aaa; margin-bottom: 5px;">• Ajuste de suspensión, fricción y control del auto.</li>
-                            <li style="font-size: 0.9rem; color: #aaa;">• Diseño de menús y flujo de juego UI.</li>
-                        </ul>
-                        <br>
-                        <a href="https://drive.google.com/drive/folders/1-lsW_FsNLXB1HaR-oj4g8A-Dnr-45vYv?usp=sharing" target="_blank" class="btn btn-outline" style="width:100%; font-size: 0.9rem;">Descargar Build</a>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="card-image"><img src="Captura_Chess_2.png" alt="Chess RTS"></div>
-                    <div class="card-body">
-                        <h3>Chess RTS 3D</h3>
-                        <div class="card-tech"><span>Estrategia</span><span>IA Básica</span></div>
-                        <p>Prototipo de Estrategia en Tiempo Real con temática de ajedrez.</p>
-                        <ul>
-                            <li style="font-size: 0.9rem; color: #aaa; margin-bottom: 5px;">• Desarrollo full-stack de mecánicas y UI.</li>
-                            <li style="font-size: 0.9rem; color: #aaa; margin-bottom: 5px;">• Implementación de <strong>IA (NPC)</strong> básica para el oponente.</li>
-                            <li style="font-size: 0.9rem; color: #aaa;">• Sistema de pausa y gestión de escenas.</li>
-                        </ul>
-                        <br>
-                        <a href="https://drive.google.com/drive/folders/1TeHY3d_UryVly2k7iQ4En_3FK53W1kki?usp=sharing" target="_blank" class="btn btn-outline" style="width:100%; font-size: 0.9rem;">Descargar Build</a>
+                        <p>Recreación de físicas vehiculares estilo Rocket League.</p>
+                        <a href="https://drive.google.com/drive/folders/1-lsW_FsNLXB1HaR-oj4g8A-Dnr-45vYv?usp=sharing" class="btn btn-outline" style="width:100%; margin-top: auto;">Descargar</a>
                     </div>
                 </div>
 
                 <div class="card">
-                    <div class="card-image"><img src="Captura_Sistema_Solar_2.png" alt="Sistema Solar"></div>
+                    <div class="card-image"><img src="Captura_Chess_2.png"></div>
+                    <div class="card-body">
+                        <h3>Chess RTS 3D</h3>
+                        <div class="card-tech"><span>IA Básica</span><span>Estrategia</span></div>
+                        <p>Prototipo de estrategia en tiempo real con temática de ajedrez.</p>
+                        <a href="https://drive.google.com/drive/folders/1TeHY3d_UryVly2k7iQ4En_3FK53W1kki?usp=sharing" class="btn btn-outline" style="width:100%; margin-top: auto;">Descargar</a>
+                    </div>
+                </div>
+
+                 <div class="card">
+                    <div class="card-image"><img src="Captura_Sistema_Solar_2.png"></div>
                     <div class="card-body">
                         <h3>Simulador Orbital</h3>
                         <div class="card-tech"><span>Matemáticas</span><span>Vectores</span></div>
-                        <p>Simulación física de trayectorias y órbitas.</p>
-                        <ul>
-                            <li style="font-size: 0.9rem; color: #aaa; margin-bottom: 5px;">• Cálculo de elipses y velocidades de traslación.</li>
-                            <li style="font-size: 0.9rem; color: #aaa; margin-bottom: 5px;">• Sistema de cámaras dinámicas (3 modos).</li>
-                            <li style="font-size: 0.9rem; color: #aaa;">• Control de velocidad temporal de la simulación.</li>
-                        </ul>
-                        <br>
-                        <a href="https://drive.google.com/drive/folders/1PN0QzAaJE3zpgDrL_rB6ycB2gL5WyuAT?usp=sharing" target="_blank" class="btn btn-outline" style="width:100%; font-size: 0.9rem;">Descargar Build</a>
+                        <p>Simulación física de órbitas y gravedad.</p>
+                        <a href="https://drive.google.com/drive/folders/1PN0QzAaJE3zpgDrL_rB6ycB2gL5WyuAT?usp=sharing" class="btn btn-outline" style="width:100%; margin-top: auto;">Descargar</a>
                     </div>
                 </div>
 
             </div>
         </section>
-
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Mauricio Navarro. Designed for Performance.</p>
-        </div>
-    </footer>
-
+    <footer><div class="container"><p>&copy; 2025 Mauricio Navarro.</p></div></footer>
     <script src="script.js"></script>
 </body>
 </html>
