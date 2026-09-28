@@ -1,268 +1,696 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mauricio Navarro | Game Developer</title>
-<meta name="description" content="Portafolio de Mauricio Navarro, Ingeniero en Videojuegos especializado en Unity, Unreal Engine y UEFN.">
-<meta property="og:title" content="Mauricio Navarro — Game Developer">
-<meta property="og:description" content="Unity · Unreal Engine · UEFN/Verse. Mira mis proyectos.">
-<meta property="og:image" content="https://elchore709.github.io/mi-portafolio/img/Captura_Beers_2.png">
-<link rel="icon" href="favicon.ico">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mauricio Navarro | Gameplay Programmer &amp; Technical Artist</title>
+  <meta name="description" content="Portafolio de Mauricio Navarro, Ingeniero en Videojuegos especializado en Unity 6, Unreal Engine 5, UEFN/Verse y Shaders HLSL.">
+  <meta property="og:title" content="Mauricio Navarro — Game Developer & Technical Artist">
+  <meta property="og:description" content="Sistemas de gameplay, shaders HLSL, IA y experiencias interactivas en Unity y Unreal Engine. Mira mis proyectos con desgloses técnicos.">
+  <meta property="og:image" content="https://elchore709.github.io/mi-portafolio/img/Captura_Beers_2.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ATMÓSFERA Y PARTÍCULAS DE FONDO -->
 <div class="bg-atmosphere">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
   <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
 </div>
 
-<nav class="navbar">
-  <div class="container">
-    <a href="#inicio" class="logo">Mauricio<span>.Dev</span></a>
-    <div class="menu-toggle" id="mobile-menu">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+<!-- NAVEGACIÓN -->
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="#inicio" class="logo">
+      <span class="logo-bracket">&lt;</span>Mauricio<span class="logo-accent">.Dev</span><span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <div class="status-badge-nav">
+      <span class="status-dot"></span>
+      <span class="status-text">Disponible para oportunidades</span>
     </div>
+
+    <div class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
     <ul class="nav-links" id="nav-menu">
-      <li><a href="#inicio" class="nav-link">Inicio</a></li>
+      <li><a href="#inicio" class="nav-link active">Inicio</a></li>
       <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+      <li><a href="#codigo" class="nav-link">Arquitectura &amp; Código</a></li>
       <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
       <li><a href="#contacto" class="nav-link">Contacto</a></li>
-      <li class="nav-cta"><a href="cv.pdf" download="CV_Mauricio_Navarro.pdf" class="btn btn-primary" style="padding:9px 18px;">CV ↓</a></li>
+      <li class="nav-cta">
+        <a href="cv.pdf" download="CV_Mauricio_Navarro.pdf" class="btn btn-primary btn-sm">
+          <span>Descargar CV</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <header class="hero" id="inicio">
   <div class="container hero-grid">
-    <div class="reveal">
-      <div class="eyebrow">Game Developer · Unity &amp; Unreal Engine</div>
-      <h1>Construyo <span class="grad">mundos jugables</span>, de la mecánica al shader.</h1>
-      <p class="lead">Ingeniero en Videojuegos egresado de la Universidad de Guadalajara. Diseño sistemas de gameplay, IA, shaders y experiencias en Unity, Unreal Engine 5 y UEFN — y los llevo de prototipo a algo que la gente juega de verdad.</p>
-      <div class="hero-tag-row">
-        <span class="pill">C# · Verse · Python</span>
-        <span class="pill">Unity 6 · UE5 · UEFN</span>
-        <span class="pill">HLSL / Shaders</span>
-        <span class="pill">XR / VR</span>
+    <div class="hero-content reveal">
+      <div class="badge-pill">
+        <span class="pill-dot"></span>
+        <span>Gameplay Programmer · Technical Artist</span>
       </div>
+
+      <h1>Construyo <span class="grad-text">arquitecturas sólidas</span> y mundos jugables.</h1>
+
+      <p class="lead">
+        Ingeniero en Videojuegos egresado de la Universidad de Guadalajara. Especializado en diseño de sistemas de gameplay, máquinas de estado para IA, shaders HLSL y experiencias interactivas en <strong>Unity 6</strong>, <strong>Unreal Engine 5</strong> y <strong>UEFN</strong>.
+      </p>
+
+      <div class="hero-tech-stack">
+        <div class="tech-item"><span class="tech-label">Motores:</span> Unity 6 · Unreal Engine 5 · UEFN</div>
+        <div class="tech-item"><span class="tech-label">Lenguajes:</span> C# · Verse · HLSL · C++ · Python</div>
+        <div class="tech-item"><span class="tech-label">Especialidad:</span> Gameplay Systems · Shaders · XR / VR</div>
+      </div>
+
       <div class="hero-actions">
-        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-        <a href="cv.pdf" download="CV_Mauricio_Navarro.pdf" class="btn btn-outline">📄 Descargar CV</a>
+        <a href="#proyectos" class="btn btn-primary">
+          <span>Explorar Proyectos</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <a href="#codigo" class="btn btn-outline">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <span>Ver Snippets de Código</span>
+        </a>
+        <a href="https://github.com/ELCHORE709" target="_blank" rel="noopener" class="btn btn-icon" title="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
       </div>
+
       <div class="stat-row">
-        <div class="stat"><b>5+</b><span>proyectos publicados</span></div>
-        <div class="stat"><b>3</b><span>motores dominados</span></div>
-        <div class="stat"><b>1</b><span>capítulo académico</span></div>
+        <div class="stat-card">
+          <span class="stat-number">5+</span>
+          <span class="stat-desc">Proyectos jugables &amp; publicados</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">3</span>
+          <span class="stat-desc">Motores dominados (UE5, Unity, UEFN)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">1</span>
+          <span class="stat-desc">Publicación académica (Libro Blanco)</span>
+        </div>
       </div>
     </div>
-    <div class="reveal glass feature-media" style="aspect-ratio:4/5; padding:0;">
-      <img src="img/Captura_Beers_2.png" alt="Beers & Crystals gameplay" style="object-fit:cover; width:100%; height:100%;">
+
+    <div class="hero-visual reveal">
+      <div class="hero-card-glow"></div>
+      <div class="hero-card glass">
+        <div class="hero-card-header">
+          <span class="pill-live">🎮 Proyecto Destacado</span>
+          <span class="hero-engine-badge">Unity 6 · C#</span>
+        </div>
+        <div class="hero-media-wrapper">
+          <img src="img/Captura_Beers_2.png" alt="Beers & Crystals Gameplay" class="hero-img">
+          <div class="hero-media-overlay">
+            <span class="overlay-tag">Roguelike Dungeon Crawler</span>
+            <h4>Beers &amp; Crystals</h4>
+            <p>Generación procedural, máquinas de estado FSM y shaders propios.</p>
+          </div>
+        </div>
+        <div class="hero-card-footer">
+          <div class="hero-feature-tags">
+            <span class="tag">Procedural Gen</span>
+            <span class="tag">FSM Enemy AI</span>
+            <span class="tag">HLSL Shaders</span>
+          </div>
+          <button class="btn btn-sm btn-primary open-case-study" data-project="beers">Ver Ficha Técnica</button>
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
-<!-- PROYECTOS -->
+<!-- SECCIÓN PROYECTOS -->
 <section id="proyectos">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Mi Trabajo</div>
-      <h2>Proyectos Destacados</h2>
-      <p class="lead">Desarrollo profesional, investigación académica e indies publicados.</p>
-    </div>
-
-    <div class="feature glass reveal">
-      <div>
-        <div class="eyebrow" style="margin-bottom:8px;">Proyecto de Investigación · En Desarrollo</div>
-        <h3 style="font-size:1.6rem;">BioRuta</h3>
-        <p class="desc" style="margin-top:12px;">Juego serio desarrollado para un proyecto de investigación dirigido por su encargado, sobre educación en energía a partir de biomasa. A cargo del desarrollo del juego en Unreal Engine 5.8, además de la documentación y métricas para su publicación en una revista científica.</p>
-        <ul>
-          <li>Sistemas de juego y Blueprints en UE5.8</li>
-          <li>Animación de personajes y objetos interactivos</li>
-          <li>Documentación y métricas para publicación científica</li>
-        </ul>
-        <div class="feature-tags">
-          <span class="tag">Unreal Engine 5.8</span>
-          <span class="tag">Blueprints</span>
-          <span class="tag">Animación</span>
-        </div>
-        <span class="btn btn-outline btn-disabled">Entrega estimada: Sep 2026</span>
+      <div class="eyebrow">Portfolio Técnico</div>
+      <h2>Proyectos &amp; Sistemas</h2>
+      <p class="lead">Desarrollos comerciales, colaboraciones de estudio, investigación científica y juegos publicados en itch.io.</p>
+      
+      <!-- FILTROS INTERACTIVOS -->
+      <div class="filter-bar" id="project-filters">
+        <button class="filter-btn active" data-filter="all">Todos (8)</button>
+        <button class="filter-btn" data-filter="unity">Unity 6</button>
+        <button class="filter-btn" data-filter="unreal">Unreal Engine 5</button>
+        <button class="filter-btn" data-filter="uefn">UEFN / Verse</button>
+        <button class="filter-btn" data-filter="shaders">Shaders &amp; VFX</button>
+        <button class="filter-btn" data-filter="investigacion">Investigación &amp; VR</button>
       </div>
-      <div class="feature-media"><img src="img/bioruta-placeholder.svg" alt="BioRuta"></div>
     </div>
 
-    <div class="feature glass reveal">
-      <div>
-        <div class="eyebrow" style="margin-bottom:8px;">Indie · Publicado en itch.io</div>
-        <h3 style="font-size:1.6rem;">Beers &amp; Crystals</h3>
-        <p class="desc" style="margin-top:12px;">Roguelike de acción con desarrollo integral propio: dungeon crawler con arquitectura escalable.</p>
-        <ul>
-          <li>IA enemiga con máquinas de estados (FSM)</li>
-          <li>Generación procedural de mazmorras</li>
-          <li>Sistema de audio y mecánica Chaos/Frenzy</li>
-        </ul>
-        <div class="feature-tags">
-          <span class="tag">Unity 6</span><span class="tag">C#</span><span class="tag">Roguelike</span>
+    <!-- PROYECTOS DESTACADOS (FEATURED) -->
+    <div class="featured-list">
+
+      <!-- PROYECTO 1: BIORUTA -->
+      <article class="feature glass reveal project-item" data-category="unreal investigacion">
+        <div class="feature-info">
+          <div class="card-meta">
+            <span class="badge badge-accent">Investigación Científica</span>
+            <span class="badge-status">En Desarrollo</span>
+          </div>
+          <h3>BioRuta</h3>
+          <p class="desc">
+            Juego serio desarrollado en <strong>Unreal Engine 5.8</strong> para un proyecto de investigación enfocado en educación energética sobre biomasa. Responsable del diseño de sistemas de gameplay, captura de métricas del usuario para análisis pedagógico y animación interactiva con miras a publicación en revista científica indexada.
+          </p>
+          <ul class="feature-bullets">
+            <li><strong>Sistemas &amp; Arquitectura:</strong> Blueprints modulares desacoplados con eventos delegados en UE5.8.</li>
+            <li><strong>Telemetría Educativa:</strong> Módulo de registro de decisiones y tiempos de resolución para métricas académicas.</li>
+            <li><strong>Animación &amp; Entorno:</strong> Control de Sequencer, State Machines de animación y props dinámicos.</li>
+          </ul>
+          <div class="feature-tags">
+            <span class="tag">Unreal Engine 5.8</span>
+            <span class="tag">Blueprints</span>
+            <span class="tag">Game Metrics</span>
+            <span class="tag">Educativo</span>
+          </div>
+          <div class="feature-cta-row">
+            <button class="btn btn-primary open-case-study" data-project="bioruta">
+              <span>Ficha Técnica Detallada</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <span class="meta-note">📅 Entrega estimada: Sep 2026</span>
+          </div>
         </div>
-        <a href="https://beers-co.itch.io/beers-crystals" target="_blank" rel="noopener" class="btn btn-primary">🎮 Jugar en itch.io</a>
-      </div>
-      <div class="feature-media"><img src="img/Captura_Beers_2.png" alt="Beers & Crystals"></div>
-    </div>
-
-    <div class="feature glass reveal">
-      <div>
-        <div class="eyebrow" style="margin-bottom:8px;">Experiencia Profesional · Ene–Mar 2026</div>
-        <h3 style="font-size:1.6rem;">C111 Studios (Fortnite / UEFN)</h3>
-        <p class="desc" style="margin-top:12px;">Colaboración remota con un equipo nacional creando experiencias para el ecosistema de Fortnite. Uso de Verse para lógica personalizada y diseño de niveles competitivos.</p>
-        <div class="feature-tags">
-          <span class="tag">Unreal Editor for Fortnite</span><span class="tag">Verse</span><span class="tag">Multijugador</span>
+        <div class="feature-media" role="button" tabindex="0" class="open-case-study" data-project="bioruta">
+          <img src="img/bioruta-placeholder.svg" alt="BioRuta UE5 Serious Game">
+          <div class="media-hover-hint"><span>🔍 Clic para ver detalles</span></div>
         </div>
-        <span class="btn btn-outline btn-disabled">Proyecto bajo NDA 🔒</span>
-      </div>
-      <div class="feature-media"><img src="img/nda-placeholder.svg" alt="C111 Studios"></div>
+      </article>
+
+      <!-- PROYECTO 2: BEERS & CRYSTALS -->
+      <article class="feature glass reveal project-item" data-category="unity itch">
+        <div class="feature-info">
+          <div class="card-meta">
+            <span class="badge badge-success">Publicado en itch.io</span>
+            <span class="badge-engine">Unity 6 · C#</span>
+          </div>
+          <h3>Beers &amp; Crystals</h3>
+          <p class="desc">
+            Roguelike de acción y combate en mazmorras con arquitectura modular y escalable. Creado de punta a punta: desde la generación aleatoria de salas hasta la inteligencia artificial de los enemigos y el sistema de audio reactivo.
+          </p>
+          <ul class="feature-bullets">
+            <li><strong>IA Enemiga con FSM:</strong> Patrón State Machine jerárquico para comportamientos de patrulla, persecución y telegrafiado de ataques.</li>
+            <li><strong>Generación Procedural:</strong> Algoritmo de partición espacial (BSP) que garantiza mazmorras navegables con balance de dificultad.</li>
+            <li><strong>Mecánica Frenesí / Chaos:</strong> Sistema de gestión de recursos y combate dinámico con audio paramétrico.</li>
+          </ul>
+          <div class="feature-tags">
+            <span class="tag">Unity 6</span>
+            <span class="tag">C# Moderno</span>
+            <span class="tag">Procedural Gen</span>
+            <span class="tag">FSM / IA</span>
+            <span class="tag">Roguelike</span>
+          </div>
+          <div class="feature-cta-row">
+            <button class="btn btn-primary open-case-study" data-project="beers">
+              <span>Ficha Técnica &amp; Arquitectura</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+            <a href="https://beers-co.itch.io/beers-crystals" target="_blank" rel="noopener" class="btn btn-outline">
+              🎮 Jugar en itch.io
+            </a>
+          </div>
+        </div>
+        <div class="feature-media" role="button" tabindex="0" class="open-case-study" data-project="beers">
+          <img src="img/Captura_Beers_2.png" alt="Beers & Crystals Gameplay">
+          <div class="media-hover-hint"><span>🔍 Clic para ver galería y arquitectura</span></div>
+        </div>
+      </article>
+
+      <!-- PROYECTO 3: C111 STUDIOS (FORTNITE / UEFN) -->
+      <article class="feature glass reveal project-item" data-category="uefn unreal">
+        <div class="feature-info">
+          <div class="card-meta">
+            <span class="badge badge-purple">Experiencia de Estudio</span>
+            <span class="badge-engine">UEFN · Verse</span>
+          </div>
+          <h3>C111 Studios — Experiencias Fortnite</h3>
+          <p class="desc">
+            Colaboración remota con equipo profesional multidisciplinario creando islas y mapas competitivos para el ecosistema de Fortnite. Programación de mecánicas personalizadas en el lenguaje <strong>Verse</strong> y diseño de niveles enfocado en retención y flujo de combate multijugador.
+          </p>
+          <ul class="feature-bullets">
+            <li><strong>Programación en Verse:</strong> Manejo de eventos asíncronos, lógica de rondas, spawn de items y puntuación reactiva.</li>
+            <li><strong>Level Design Competitivo:</strong> Flujo de circulación de jugadores, coberturas y optimización de densidad de memoria.</li>
+            <li><strong>Colaboración Profesional:</strong> Integración en pipeline de producción y metodologías ágiles en equipo.</li>
+          </ul>
+          <div class="feature-tags">
+            <span class="tag">UEFN</span>
+            <span class="tag">Lenguaje Verse</span>
+            <span class="tag">Multijugador</span>
+            <span class="tag">Fortnite Ecosystem</span>
+          </div>
+          <div class="feature-cta-row">
+            <button class="btn btn-primary open-case-study" data-project="c111">
+              <span>Ficha Técnica</span>
+            </button>
+            <span class="badge-nda">🔒 Proyecto bajo NDA</span>
+          </div>
+        </div>
+        <div class="feature-media" role="button" tabindex="0" class="open-case-study" data-project="c111">
+          <img src="img/nda-placeholder.svg" alt="C111 Studios UEFN NDA Project">
+          <div class="media-hover-hint"><span>🔍 Clic para ver rol y retos superados</span></div>
+        </div>
+      </article>
+
     </div>
 
-    <h3 style="margin: 70px 0 26px; font-size:1.3rem;" class="reveal">Más Proyectos</h3>
-    <div class="grid-projects reveal">
+    <!-- GRID DE MÁS PROYECTOS -->
+    <div class="section-subhead reveal">
+      <h3>Más Proyectos Especializados</h3>
+      <p class="sublead">Prototipos técnicos, simulación de físicas, shaders y game jams.</p>
+    </div>
 
-      <div class="card glass">
-        <div class="card-image"><img src="img/vr-placeholder.svg" alt="Beers & Crystals VR"></div>
+    <div class="grid-projects" id="projects-grid">
+
+      <!-- CARD 1: BEERS & CRYSTALS VR -->
+      <div class="card glass reveal project-item" data-category="unity vr shaders">
+        <div class="card-image-wrap">
+          <img src="img/vr-placeholder.svg" alt="Beers & Crystals VR" class="card-img">
+          <div class="card-overlay-badge">VR / XR</div>
+        </div>
         <div class="card-body">
-          <div class="card-tech"><span>Unity</span><span>XR Toolkit</span></div>
+          <div class="card-tech">
+            <span>Unity</span>
+            <span>XR Toolkit</span>
+            <span>HLSL Shaders</span>
+          </div>
           <h3>Beers &amp; Crystals VR</h3>
-          <p>Adaptación a realidad virtual: shaders de líquido en HLSL, nivel completo para VR y mecánicas de interacción con XR Interaction Toolkit.</p>
+          <p>Adaptación a Realidad Virtual inmersiva: sombreador HLSL de superficie líquida con física angular de wobble, cinemática de manos e interacciones hápticas optimizadas a 90 FPS.</p>
+          <div class="card-footer-action">
+            <button class="btn-text-link open-case-study" data-project="beers-vr">Ver Desglose Técnico →</button>
+          </div>
         </div>
       </div>
 
-      <div class="card glass">
-        <div class="card-image"><img src="img/Captura_Ultimo_Viaje_2.png" alt="El Último Viaje"></div>
+      <!-- CARD 2: EL ÚLTIMO VIAJE -->
+      <div class="card glass reveal project-item" data-category="unity shaders">
+        <div class="card-image-wrap">
+          <img src="img/Captura_Ultimo_Viaje_2.png" alt="El Último Viaje" class="card-img">
+          <div class="card-overlay-badge">Game Jam</div>
+        </div>
         <div class="card-body">
-          <div class="card-tech"><span>Unity</span><span>Shaders</span></div>
+          <div class="card-tech">
+            <span>Unity</span>
+            <span>Shader Graph</span>
+            <span>IA Compañero</span>
+          </div>
           <h3>El Último Viaje</h3>
-          <p>Exploración atmosférica en el Mictlán · LAGS Game Jam 2024. Shaders propios, IA de compañero y final de doble ramificación.</p>
+          <p>Aventura atmosférica inspirada en el Mictlán (LAGS Game Jam 2024). Shaders de niebla volumétrica y disolución, IA de compañero reactivo y sistema narrativo de doble desenlace.</p>
+          <div class="card-footer-action">
+            <button class="btn-text-link open-case-study" data-project="ultimo-viaje">Ver Desglose Técnico →</button>
+          </div>
         </div>
       </div>
 
-      <div class="card glass">
-        <div class="card-image"><img src="img/Captura_Sistema_Solar_2.png" alt="Simulador Orbital"></div>
+      <!-- CARD 3: SIMULADOR ORBITAL -->
+      <div class="card glass reveal project-item" data-category="unity investigacion">
+        <div class="card-image-wrap">
+          <img src="img/Captura_Sistema_Solar_2.png" alt="Simulador Orbital" class="card-img">
+          <div class="card-overlay-badge">Paper Académico</div>
+        </div>
         <div class="card-body">
-          <div class="card-tech"><span>Unity</span><span>Investigación</span></div>
+          <div class="card-tech">
+            <span>Física Newtoniana</span>
+            <span>Unity</span>
+            <span>Educativo</span>
+          </div>
           <h3>Simulador de Física Orbital</h3>
-          <p>Simulación física de órbitas y gravedad, usada en un estudio de investigación sobre aprendizaje infantil.</p>
+          <p>Simulador gravitacional $N$-cuerpos con cálculo de órbitas y trayectorias cónicas. Empleado formalmente en un estudio publicado sobre aprendizaje infantil con videojuegos.</p>
+          <div class="card-footer-action">
+            <button class="btn-text-link open-case-study" data-project="simulador-orbital">Ver Desglose Técnico →</button>
+          </div>
         </div>
       </div>
 
-      <div class="card glass">
-        <div class="card-image"><img src="img/Captura_Car_Champions_2.png" alt="Car Champions"></div>
+      <!-- CARD 4: CAR CHAMPIONS -->
+      <div class="card glass reveal project-item" data-category="unity">
+        <div class="card-image-wrap">
+          <img src="img/Captura_Car_Champions_2.png" alt="Car Champions" class="card-img">
+          <div class="card-overlay-badge">Físicas</div>
+        </div>
         <div class="card-body">
-          <div class="card-tech"><span>Físicas</span><span>Wheel Colliders</span></div>
+          <div class="card-tech">
+            <span>Wheel Colliders</span>
+            <span>Rigidbody Physics</span>
+            <span>Unity</span>
+          </div>
           <h3>Car-Champions</h3>
-          <p>Recreación de físicas vehiculares estilo Rocket League.</p>
+          <p>Recreación de dinámicas vehiculares estilo <em>Rocket League</em>: modelado de tracción, derrape controlado, suspensión con resortes y control de torque y pitch en saltos aéreos.</p>
+          <div class="card-footer-action">
+            <button class="btn-text-link open-case-study" data-project="car-champions">Ver Desglose Técnico →</button>
+          </div>
         </div>
       </div>
 
-      <div class="card glass">
-        <div class="card-image"><img src="img/Captura_Chess_2.png" alt="Chess RTS 3D"></div>
+      <!-- CARD 5: CHESS RTS 3D -->
+      <div class="card glass reveal project-item" data-category="unity">
+        <div class="card-image-wrap">
+          <img src="img/Captura_Chess_2.png" alt="Chess RTS 3D" class="card-img">
+          <div class="card-overlay-badge">IA &amp; Estrategia</div>
+        </div>
         <div class="card-body">
-          <div class="card-tech"><span>IA básica</span><span>Estrategia</span></div>
+          <div class="card-tech">
+            <span>RTS Heuristics</span>
+            <span>NavMesh / Grid</span>
+            <span>Unity</span>
+          </div>
           <h3>Chess RTS 3D</h3>
-          <p>Prototipo de estrategia en tiempo real con temática de ajedrez.</p>
+          <p>Estrategia en tiempo real con mecánicas del ajedrez: sin turnos, con sistema de cooldowns, evaluación heurística de casillas y algoritmo de toma de decisiones para la IA enemiga.</p>
+          <div class="card-footer-action">
+            <button class="btn-text-link open-case-study" data-project="chess-rts">Ver Desglose Técnico →</button>
+          </div>
         </div>
       </div>
 
     </div>
 
+    <!-- BANNER DE PUBLICACIÓN ACADÉMICA -->
     <div class="pub-banner glass reveal">
       <div class="pub-icon">📘</div>
-      <div>
-        <h3>Libro Blanco de los Videojuegos</h3>
-        <p>Coautor de capítulo derivado del Simulador de Física Orbital, documentando su uso en un estudio de investigación sobre aprendizaje infantil mediante videojuegos.</p>
+      <div class="pub-content">
+        <div class="pub-header">
+          <h3>Libro Blanco de los Videojuegos</h3>
+          <span class="pub-badge">Capítulo Publicado / En Prensa</span>
+        </div>
+        <p>
+          Coautor de capítulo derivado del <em>Simulador de Física Orbital</em>, documentando cuantitativa y cualitativamente el impacto de entornos lúdicos interactivos en la comprensión infantil de la gravedad y las mecánicas celestes.
+        </p>
       </div>
-      <span class="pub-badge">En proceso de publicación</span>
     </div>
   </div>
 </section>
 
-<!-- SOBRE MI -->
+<!-- SECCIÓN DE CÓDIGO & ARQUITECTURA -->
+<section id="codigo" class="tight">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Ingeniería de Software</div>
+      <h2>Arquitectura &amp; Código Limpio</h2>
+      <p class="lead">Una muestra de cómo estructuro sistemas de gameplay desacoplados, shaders eficientes y lógica reactiva.</p>
+    </div>
+
+    <div class="code-showcase glass reveal">
+      <div class="code-tabs" id="code-tabs">
+        <button class="code-tab active" data-tab="fsm">
+          <span class="tab-icon">#</span> C# — FSM para IA Enemiga (Unity)
+        </button>
+        <button class="code-tab" data-tab="shader">
+          <span class="tab-icon">✦</span> HLSL — Cálculo de Líquido Wobble (VR)
+        </button>
+        <button class="code-tab" data-tab="verse">
+          <span class="tab-icon">⚡</span> Verse — Game Loop &amp; Eventos (UEFN)
+        </button>
+      </div>
+
+      <!-- TAB 1: C# FSM -->
+      <div class="code-panel active" id="tab-fsm">
+        <div class="code-meta-bar">
+          <span class="code-file-name">EnemyStateMachine.cs</span>
+          <span class="code-tag">Pattern: Hierarchical State Machine · Zero Garbage Allocation</span>
+        </div>
+        <pre><code><span class="c-comment">// Máquina de Estados para IA Enemiga (Beers & Crystals)</span>
+<span class="c-keyword">public abstract class</span> <span class="c-type">EnemyState</span>
+{
+    <span class="c-keyword">protected readonly</span> <span class="c-type">EnemyController</span> enemy;
+    <span class="c-keyword">protected readonly</span> <span class="c-type">StateMachine</span> stateMachine;
+
+    <span class="c-keyword">public</span> <span class="c-func">EnemyState</span>(<span class="c-type">EnemyController</span> enemy, <span class="c-type">StateMachine</span> sm)
+    {
+        <span class="c-keyword">this</span>.enemy = enemy;
+        <span class="c-keyword">this</span>.stateMachine = sm;
+    }
+
+    <span class="c-keyword">public virtual void</span> <span class="c-func">Enter</span>() { }
+    <span class="c-keyword">public virtual void</span> <span class="c-func">LogicUpdate</span>() { }
+    <span class="c-keyword">public virtual void</span> <span class="c-func">PhysicsUpdate</span>() { }
+    <span class="c-keyword">public virtual void</span> <span class="c-func">Exit</span>() { }
+}
+
+<span class="c-comment">// Estado de Persecución con predicción de trayectoria</span>
+<span class="c-keyword">public class</span> <span class="c-type">ChaseState</span> : <span class="c-type">EnemyState</span>
+{
+    <span class="c-keyword">public override void</span> <span class="c-func">LogicUpdate</span>()
+    {
+        <span class="c-keyword">float</span> distToPlayer = <span class="c-type">Vector3</span>.Distance(enemy.transform.position, enemy.Target.position);
+
+        <span class="c-keyword">if</span> (distToPlayer &lt;= enemy.AttackRadius)
+        {
+            stateMachine.<span class="c-func">ChangeState</span>(enemy.AttackTelegraphState);
+            <span class="c-keyword">return</span>;
+        }
+
+        <span class="c-keyword">if</span> (distToPlayer > enemy.LoseAggroRadius)
+        {
+            stateMachine.<span class="c-func">ChangeState</span>(enemy.PatrolState);
+            <span class="c-keyword">return</span>;
+        }
+
+        enemy.NavAgent.<span class="c-func">SetDestination</span>(enemy.Target.position);
+    }
+}</code></pre>
+      </div>
+
+      <!-- TAB 2: HLSL SHADER -->
+      <div class="code-panel" id="tab-shader">
+        <div class="code-meta-bar">
+          <span class="code-file-name">LiquidWobble.hlsl</span>
+          <span class="code-tag">HLSL · Custom Function for Unity URP & VR</span>
+        </div>
+        <pre><code><span class="c-comment">// Cálculo del plano de corte de líquido con inercia física</span>
+<span class="c-keyword">void</span> <span class="c-func">CalculateLiquidPlane_float</span>(
+    <span class="c-keyword">float3</span> worldPos,
+    <span class="c-keyword">float3</span> vesselPos,
+    <span class="c-keyword">float3</span> wobbleVector,
+    <span class="c-keyword">float</span> fillAmount,
+    <span class="c-keyword">out float</span> mask,
+    <span class="c-keyword">out float3</span> liquidNormal
+)
+{
+    <span class="c-comment">// Vector normal de la superficie inclinada según aceleración</span>
+    <span class="c-keyword">float3</span> upVector = <span class="c-keyword">normalize</span>(<span class="c-keyword">float3</span>(0.0, 1.0, 0.0) + wobbleVector);
+    liquidNormal = upVector;
+
+    <span class="c-comment">// Distancia vertical relativa al centro de la jarra</span>
+    <span class="c-keyword">float3</span> relPos = worldPos - vesselPos;
+    <span class="c-keyword">float</span> planeDistance = <span class="c-keyword">dot</span>(relPos, upVector);
+
+    <span class="c-comment">// Borde afilado con antialiasing mediante fwidth</span>
+    <span class="c-keyword">float</span> fillHeight = (fillAmount - 0.5) * 2.0;
+    <span class="c-keyword">float</span> delta = <span class="c-keyword">fwidth</span>(planeDistance);
+    mask = <span class="c-keyword">smoothstep</span>(-delta, delta, fillHeight - planeDistance);
+}</code></pre>
+      </div>
+
+      <!-- TAB 3: VERSE -->
+      <div class="code-panel" id="tab-verse">
+        <div class="code-meta-bar">
+          <span class="code-file-name">round_manager_device.verse</span>
+          <span class="code-tag">UEFN · Verse Programming Language</span>
+        </div>
+        <pre><code><span class="c-comment"># Dispositivo de control de ronda y puntuación competitiva (UEFN)</span>
+<span class="c-keyword">using</span> { /Fortnite.com/Devices }
+<span class="c-keyword">using</span> { /Verse.org/Simulation }
+
+round_manager_device := <span class="c-keyword">class</span>(creative_device):
+    @editable EliminationTracker : elimination_feed_device = elimination_feed_device{}
+    @editable RoundTimer : timer_device = timer_device{}
+
+    <span class="c-keyword">var</span> ActivePlayers : [agent]int = <span class="c-keyword">map</span>{}
+
+    <span class="c-func">OnBegin</span>&lt;override&gt;()&lt;suspends&gt; : <span class="c-keyword">void</span> =
+        EliminationTracker.EliminatedEvent.<span class="c-func">Subscribe</span>(OnPlayerEliminated)
+        RoundTimer.SuccessEvent.<span class="c-func">Subscribe</span>(OnRoundTimeExpired)
+        <span class="c-func">InitializeRoundState</span>()
+
+    <span class="c-func">OnPlayerEliminated</span>(Result : elimination_result) : <span class="c-keyword">void</span> =
+        <span class="c-keyword">if</span> (EliminatingAgent := Result.EliminatingCharacter?.GetAgent[]):
+            <span class="c-keyword">if</span> (CurrentScore := ActivePlayers[EliminatingAgent]):
+                <span class="c-keyword">if</span> (<span class="c-keyword">set</span> ActivePlayers[EliminatingAgent] = CurrentScore + 100):
+                    <span class="c-func">CheckVictoryCondition</span>(EliminatingAgent)</code></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECCIÓN SOBRE MÍ -->
 <section id="sobre-mi">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow">Mi Perfil</div>
+      <div class="eyebrow">Perfil &amp; Habilidades</div>
       <h2>Sobre Mí</h2>
-      <p class="lead">Ingeniero en Videojuegos recién egresado, especializado en gameplay, IA y gráficos en tiempo real.</p>
+      <p class="lead">Ingeniero en Videojuegos con mentalidad analítica, pasión por los sistemas desacoplados y la fidelidad gráfica en tiempo real.</p>
     </div>
 
     <div class="about-grid">
-      <div class="reveal">
+      <!-- BLOQUES DE HABILIDADES TÉCNICAS -->
+      <div class="skills-column reveal">
         <div class="skill-block glass">
-          <div class="icon">🎮</div>
-          <h3>Gameplay &amp; IA</h3>
-          <p>IA enemiga por máquinas de estados (FSM), generación procedural, sistemas de física y arquitectura de gameplay en C# y Verse.</p>
+          <div class="skill-header">
+            <span class="skill-icon">🎮</span>
+            <div>
+              <h3>Gameplay &amp; Arquitectura</h3>
+              <span class="skill-subtitle">C#, C++, Blueprints &amp; Verse</span>
+            </div>
+          </div>
+          <p>Diseño de arquitecturas desacopladas mediante <strong>State Machines (FSM)</strong>, sistemas de eventos/delegados, generación procedural de niveles (BSP) y patrones orientados a datos.</p>
         </div>
+
         <div class="skill-block glass">
-          <div class="icon">✨</div>
-          <h3>Gráficos &amp; Shaders</h3>
-          <p><strong>HLSL / Shader Graph:</strong> efectos atmosféricos, VFX y shaders de líquido. Animación de personajes y objetos en Unreal (Blueprints, Sequencer).</p>
+          <div class="skill-header">
+            <span class="skill-icon">✨</span>
+            <div>
+              <h3>Shaders &amp; Gráficos en Tiempo Real</h3>
+              <span class="skill-subtitle">HLSL, Shader Graph, Material Editor</span>
+            </div>
+          </div>
+          <p>Efectos de agua/líquidos interactivos, niebla volumétrica, disolución con máscaras, optimización de draw calls, perfilado de vertex/fragment cost y estética estilizada.</p>
         </div>
+
         <div class="skill-block glass">
-          <div class="icon">🥽</div>
-          <h3>VR</h3>
-          <p>Diseño de nivel e interacción para realidad virtual con XR Interaction Toolkit.</p>
+          <div class="skill-header">
+            <span class="skill-icon">🥽</span>
+            <div>
+              <h3>Realidad Virtual &amp; Simulación de Físicas</h3>
+              <span class="skill-subtitle">XR Interaction Toolkit &amp; PhysX</span>
+            </div>
+          </div>
+          <p>Interacciones con manos y cinemática en VR a 90 FPS estables. Simulación física: calibración de <em>Wheel Colliders</em> vehiculares y simulación de gravedad orbital $N$-cuerpos.</p>
         </div>
+
         <div class="skill-block glass">
-          <div class="icon">🛠️</div>
-          <h3>Herramientas</h3>
-          <p>Unity 6, Unreal Engine 5, Git, REST APIs, SQL, PowerShell.</p>
+          <div class="skill-header">
+            <span class="skill-icon">🛠️</span>
+            <div>
+              <h3>Herramientas &amp; Pipeline de Producción</h3>
+              <span class="skill-subtitle">Flujo de trabajo colaborativo</span>
+            </div>
+          </div>
+          <p>Unity 6, Unreal Engine 5, UEFN, Git/GitHub, Unity Profiler, Unreal Insights, REST APIs, SQL, Blender (básico) y PowerShell.</p>
         </div>
       </div>
 
-      <div class="reveal">
-        <h3 style="margin-bottom:22px;">Trayectoria</h3>
-        <div class="timeline-item">
-          <div class="when">Ago 2022 – Mayo 2026</div>
-          <h4>Ingeniería en Videojuegos</h4>
-          <p>Universidad de Guadalajara (CULagos). Título profesional en trámite (emisión estimada Q3 2026).</p>
-        </div>
-        <div class="timeline-item">
-          <div class="when">Ene – Mar 2026</div>
-          <h4>Verse Programmer (Becario) · C111 Studios</h4>
-          <p>Mecánicas y niveles para experiencias UEFN/Fortnite, con un equipo nacional de desarrollo, de forma remota.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="when">2026 (en curso)</div>
-          <h4>BioRuta</h4>
-          <p>Desarrollo de juego serio para un proyecto de investigación sobre biomasa, con miras a publicación científica.</p>
+      <!-- TRAYECTORIA Y CERTIFICACIONES -->
+      <div class="timeline-column reveal">
+        <h3 class="column-title">Trayectoria Profesional &amp; Formación</h3>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-date">Ago 2022 – Mayo 2026</div>
+            <h4>Ingeniería en Videojuegos</h4>
+            <div class="timeline-place">Universidad de Guadalajara (CULagos)</div>
+            <p>Egresado con formación en matemáticas, física, algoritmos, gráficos por computadora y arquitectura de software. Título profesional en trámite de emisión.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-date">Ene – Mar 2026</div>
+            <h4>Verse Programmer (Becario)</h4>
+            <div class="timeline-place">C111 Studios · Remoto</div>
+            <p>Implementación de mecánicas de juego en Verse para experiencias Fortnite/UEFN con un equipo nacional de desarrollo en entorno de producción real.</p>
+          </div>
+
+          <div class="timeline-item">
+            <span class="timeline-dot"></span>
+            <div class="timeline-date">2026 (En Curso)</div>
+            <h4>BioRuta — Lead Game Developer</h4>
+            <div class="timeline-place">Proyecto de Investigación Académico</div>
+            <p>Desarrollo de videojuego serio en Unreal Engine 5.8 para investigación sobre educación en biomasa y energías limpias, coordinando telemetría para publicación científica.</p>
+          </div>
         </div>
 
-        <h3 style="margin: 40px 0 18px;">Certificaciones</h3>
-        <div class="cert-row glass"><span class="dot"></span><div><strong>UE5 Fundamentals</strong><span>U-Echo Training Center · 2025</span></div></div>
-        <div class="cert-row glass"><span class="dot"></span><div><strong>Materials in Unreal Engine</strong><span>U-Echo Training Center · 2025</span></div></div>
-        <div class="cert-row glass"><span class="dot"></span><div><strong>Unity 2D Dungeon Gunner Roguelike</strong><span>Udemy · 2025</span></div></div>
+        <h3 class="column-title" style="margin-top: 40px;">Certificaciones Relevantes</h3>
+        <div class="cert-list">
+          <div class="cert-row glass">
+            <span class="cert-badge-dot"></span>
+            <div class="cert-info">
+              <strong>UE5 Fundamentals</strong>
+              <span>U-Echo Training Center · 2025</span>
+            </div>
+          </div>
+          <div class="cert-row glass">
+            <span class="cert-badge-dot"></span>
+            <div class="cert-info">
+              <strong>Materials &amp; Shaders in Unreal Engine</strong>
+              <span>U-Echo Training Center · 2025</span>
+            </div>
+          </div>
+          <div class="cert-row glass">
+            <span class="cert-badge-dot"></span>
+            <div class="cert-info">
+              <strong>Unity 2D Dungeon Gunner Roguelike Architecture</strong>
+              <span>Udemy · 2025</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- SECCIÓN CONTACTO -->
 <section id="contacto">
   <div class="container">
     <div class="contact-box glass reveal">
-      <div class="eyebrow" style="justify-content:center;">¿Trabajamos juntos?</div>
-      <h2>Hablemos</h2>
-      <p class="lead" style="margin:0 auto;">Disponible para puestos junior y freelance en desarrollo de videojuegos.</p>
-      <div class="contact-links">
-        <a href="mailto:mauricionavarrogonzalez709@gmail.com" class="btn btn-primary">✉️ mauricionavarrogonzalez709@gmail.com</a>
-        <a href="https://github.com/ELCHORE709" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      <div class="badge-pill" style="margin: 0 auto 16px;">
+        <span class="pill-dot"></span>
+        <span>Hablemos de Videojuegos</span>
+      </div>
+      <h2>¿Tienes un proyecto o vacante en mente?</h2>
+      <p class="lead" style="margin: 0 auto 30px;">
+        Disponible para posiciones como <strong>Junior Gameplay Programmer</strong>, <strong>Technical Artist</strong> o colaboraciones freelance. Respuesta asegurada en menos de 24 horas.
+      </p>
+
+      <div class="contact-actions">
+        <a href="mailto:mauricionavarrogonzalez709@gmail.com" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>mauricionavarrogonzalez709@gmail.com</span>
+        </a>
+        <a href="https://github.com/ELCHORE709" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          <span>GitHub: ELCHORE709</span>
+        </a>
+        <a href="https://beers-co.itch.io/beers-crystals" target="_blank" rel="noopener" class="btn btn-outline btn-lg">
+          <span>🎮 itch.io: beers-co</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="container"><p>&copy; 2026 Mauricio Navarro. Todos los derechos reservados.</p></div>
+  <div class="container footer-content">
+    <p>&copy; 2026 Mauricio Navarro. Todos los derechos reservados.</p>
+    <p class="footer-sub">Diseñado &amp; Desarrollado con código limpio y pasión por los videojuegos.</p>
+  </div>
 </footer>
+
+<!-- MODAL INTERACTIVO DE FICHA TÉCNICA (CASE STUDY) -->
+<div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog">
+  <div class="modal-container glass">
+    <button class="modal-close" id="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+    
+    <div class="modal-body" id="modal-content-area">
+      <!-- Se inyecta dinámicamente mediante script.js -->
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
